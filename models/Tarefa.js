@@ -13,8 +13,11 @@ const tarefaSchema = new Schema({
         type: String,
         require: true
     }
-    descricao
+    descricao : {
+        type: String,
+        require:true
     }
+    
 },{timestamps:true})
 
 
