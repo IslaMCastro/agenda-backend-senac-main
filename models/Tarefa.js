@@ -9,9 +9,11 @@ const {Schema} = mongoose
 
 //Criar o modelo
 const tarefaSchema = new Schema({
-    nome : {
+    assunto : {
         type: String,
         require: true
+    }
+    descricao
     }
 },{timestamps:true})
 
