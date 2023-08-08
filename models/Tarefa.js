@@ -11,13 +11,16 @@ const {Schema} = mongoose
 const tarefaSchema = new Schema({
     assunto : {
         type: String,
-        require: true
-    }
+        required: true
+    },
     descricao : {
         type: String,
-        require:true
+        required:true
+    },
+    contato : {
+        type: String,
+        required: true
     }
-    
 },{timestamps:true})
 
 
