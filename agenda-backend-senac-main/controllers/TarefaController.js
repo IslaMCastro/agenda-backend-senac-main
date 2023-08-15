@@ -32,12 +32,12 @@ const TarefaController = {
   get: async (req, res) => {
     try {
       const id = req.params.id;
-      const Tarefa = await TarefaModel.findById(id);
-      if (!Tarefa) {
+      const tarefa = await TarefaModel.findById(id);
+      if (!tarefa) {
         res.status(404).json({ msg: "Tarefa não encontrada!" });
         return;
       }
-      res.json(Tarefa);
+      res.json(tarefa);
     } catch (error) {
       console.log(error);
       res.status(400).json({ msg: "Não foi possivel executar pesquisa" });
@@ -47,20 +47,20 @@ const TarefaController = {
   update: async (req, res) => {
     try {
       const id = req.params.id;
-      const Tarefa = {
+      const tarefa = {
         name: req.body.nome,
       };
-      const TarefaAtualizada = await TarefaModel.findByIdAndUpdate(
+      const tarefaAtualizada = await TarefaModel.findByIdAndUpdate(
         id,
-        Tarefa
+        tarefas
       );
-      if (!TarefaAtualizada) {
+      if (!tarefaAtualizada) {
         res.status(404).json({ msg: "Tarefa não encontrada!" });
         return;
       }
       res
         .status(200)
-        .json({ TarefaAtualizada, msg: "Tarefa atualizada com sucesso!" });
+        .json({ tarefaAtualizada, msg: "Tarefa atualizada com sucesso!" });
     } catch (error) {
       console.log(error);
     }
@@ -69,15 +69,15 @@ const TarefaController = {
   delete: async (req, res) => {
     try {
       const id = req.params.id;
-      const Tarefa = await TarefaModel.findById(id);
-      if (!Tarefa) {
+      const tarefa = await TarefaModel.findById(id);
+      if (!tarefa) {
         res.status(404).json({ msg: "Tarefa não encontrada!" });
         return;
       }
-      const TarefaDeletada= await TarefaModel.findByIdAndDelete(id);
+      const tarefaDeletada= await TarefaModel.findByIdAndDelete(id);
       res
         .status(200)
-        .json({ TarefaDeletada, msg: "Tarefa deletado com sucesso!" });
+        .json({ tarefaDeletada, msg: "Tarefa deletado com sucesso!" });
     } catch (error) {
       console.log(error);
     }
