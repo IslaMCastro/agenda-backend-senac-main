@@ -10,7 +10,7 @@ const SituacaoController = {
     
     //=CRUD
     //Criar = Create
-    create : async (req, resp) => {
+    create : async (req, res) => {
         //sincrono : executar na sequencia
         //assincrono : executar em paralelo ou for de sincronia
         //req - resqust = o que o usuario que ver, salvar ou pesquisar
@@ -19,12 +19,19 @@ const SituacaoController = {
         //POST - envia dados no corpo(body) da requisição
         try{
             //tente fazer algo
-            const data = {
+            //data ou nome do modelo
+            //$data php é muito comum '$data = $request->all()' não recomendado
+            //const data = req.body
+            const situacao = {
                // nome: res.data.nome = uso o data quando é a responta para o frontend
                nome: req.body.nome // quando busco uso o BODY para o servidor processar
             }
+            const response = await SituacaoModel.create(situacao)
+            res.status(201).json({response, msg: "Criado com sucesso!"})
         }catch (error) {
             //em caso de erro retorne
+            console.log(error)
+            res.status(400).json({msg: "Não foi possível salvar"})
         }
     }
 

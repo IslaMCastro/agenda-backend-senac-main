@@ -11,7 +11,7 @@ const {Schema} = mongoose
 const situacaoSchema = new Schema({
     nome : {
         type: String,
-        require: true
+        required: true
     }
 },{timestamps:true})
 

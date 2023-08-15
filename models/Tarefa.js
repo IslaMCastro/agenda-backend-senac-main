@@ -20,6 +20,10 @@ const tarefaSchema = new Schema({
     contato : {
         type: String,
         required: true
+    },
+    situacao : {
+        type: [situacaoSchema], //tipo situacao
+        required: true
     }
 },{timestamps:true})
 

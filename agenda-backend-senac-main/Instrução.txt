@@ -1,0 +1,56 @@
+****
+Verbos HTTP:
+GET : Pegar - aqui eu vou solicitar algo a uma pagina, e o criterios são abertos, 
+as rotas são utilizada para consultas.
+
+POST : Postar - eu envio informações "envelopadas ou protegidas" dentro de um requisição
+ao servidor.
+
+PUT OU UPDATE : Atualizar registro, ele vai passar id do registro que voce quer atualizar, 
+e envia informações "envelopadas ou protegidas" dos dados que voce quer atualizar
+
+DELETE : Remove o registro que voce quer destruir no banco de dados. Aqui voce passar via url
+a id do registro.
+
+OPTION : que vai verificar a disponibilidade do objeto.
+***
+
+Criar uma pasta com o nome do projeto.
+Abrir esta pasta.
+Criar uma pasta chamada frontend
+Criar uma pasta chamada backend
+Abrir o Visual Code
+Ir em Abrir Pasta
+Selecionar a Pasta que sera utilizado.
+
+Projeto backend
+
+Clicar em Terminal > Novo Terminal
+
+Digita a sequencia
+
+1 - npm initi -y
+2 - npm install express mongoose dotenv cors
+3 - npm install --save-dev nodemon
+*** -g para instalação global - no pc e não no projeto
+*** --save-dev ambiente de desenvolvimento
+*** -i abreviação do install 
+
+Abrir arquivo package.json e insira dentro do item scripts
+"start": "nodemon app.js"
+
+Crie a estrutura de pastas para o sistema.
+
+Crie as Pastas
+models: sera utilizado para armazenar os modelos do nosso projeto
+controllers: classes responsaveis por salvar e processar regras de negocio.
+db: Classe responsavel pelo banco de dados (Conexão)
+routes: Rotas que o fluxo de informação deve seguir no sistema
+
+Crie o arquivo app.js.
+Abra o arquivo e importe as bibliotecas necessarias.
+Configure o uso.
+Crie o Listen para inicializar o servidor.
+
+
+
