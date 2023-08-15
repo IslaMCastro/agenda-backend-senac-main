@@ -5,7 +5,7 @@ async function main() {
 
         mongoose.set("strictQuery",true)
       
-        await mongoose.connect("mongodb+srv://islamoraescastro:IslaJS0608.@activity.hoixesw.mongodb.net/?retryWrites=true&w=majority");
+        await mongoose.connect("mongodb+srv://islamoraescastro:eduGc4WjFL3l7gAT@activity.hoixesw.mongodb.net/?retryWrites=true&w=majority");
         console.log("Conectado ao Banco!")
 
     } catch (error) {

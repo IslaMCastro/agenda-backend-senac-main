@@ -13,3 +13,5 @@ router.route("/situacoes/:id").delete((req, res) => situacaoController.delete(re
 //Delete - quando precisar remover
 //OPTION - para fazer alguma verificação.
 module.exports = router;
+//o mode exportação varia conforme o framework que estou usando
+//export defaut SituacaoController - 
