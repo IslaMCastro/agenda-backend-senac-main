@@ -21,7 +21,7 @@ const conn = require("./db/conn")
 
 conn()
 
-//Routes
+//Routes - carregar rotas
 
 const routes = require("./routes/router")
 
